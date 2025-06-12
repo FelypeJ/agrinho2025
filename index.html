@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festejando Campo e Cidade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animações adicionadas */
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        .slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.5s; }
+        .delay-2 { animation-delay: 1s; }
+        .delay-3 { animation-delay: 1.5s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="slide-up delay-1">
+        <h1>Festejando Campo e Cidade</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="slide-up delay-1">
+            <h2>Sobre o Evento</h2>
+            <p>O evento "Festejando Campo e Cidade" celebra as tradições rurais e urbanas com muita música, comida típica e alegria!</p>
+        </section>
+
+        <section id="eventos" class="slide-up delay-2">
+            <h2>Programação</h2>
+            <ul id="lista-eventos">
+                <!-- Eventos serão inseridos por JavaScript -->
+            </ul>
+        </section>
+
+        <section id="contato" class="slide-up delay-3">
+            <h2>Fale Conosco</h2>
+            <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="slide-up delay-3">
+        <p>&copy; 2025 Festejando Campo e Cidade</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
