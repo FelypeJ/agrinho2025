@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Festejando Campo e Cidade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Animações adicionadas */
+        /* Animações adicionais */
         .fade-in {
             animation: fadeIn 2s ease-in;
         }
@@ -17,9 +21,10 @@
             animation: slideUp 1s ease-out forwards;
         }
 
-        .delay-1 { animation-delay: 0.5s; }
-        .delay-2 { animation-delay: 1s; }
-        .delay-3 { animation-delay: 1.5s; }
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 0.9s; }
+        .delay-4 { animation-delay: 1.2s; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
@@ -29,6 +34,17 @@
         @keyframes slideUp {
             to { opacity: 1; transform: translateY(0); }
         }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="fade-in">
@@ -36,27 +52,28 @@
         <h1>Festejando Campo e Cidade</h1>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre" class="slide-up delay-2">Sobre</a></li>
+                <li><a href="#eventos" class="slide-up delay-3">Eventos</a></li>
+                <li><a href="#contato" class="slide-up delay-4">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="sobre" class="slide-up delay-1">
+        <section id="sobre" class="reveal">
             <h2>Sobre o Evento</h2>
+            <img src="https://images.unsplash.com/photo-1533142266415-ac591a4c2b04" alt="Festa rural e urbana" style="max-width:100%; border-radius: 10px;">
             <p>O evento "Festejando Campo e Cidade" celebra as tradições rurais e urbanas com muita música, comida típica e alegria!</p>
         </section>
 
-        <section id="eventos" class="slide-up delay-2">
+        <section id="eventos" class="reveal">
             <h2>Programação</h2>
             <ul id="lista-eventos">
                 <!-- Eventos serão inseridos por JavaScript -->
             </ul>
         </section>
 
-        <section id="contato" class="slide-up delay-3">
+        <section id="contato" class="reveal">
             <h2>Fale Conosco</h2>
             <form id="form-contato">
                 <label for="nome">Nome:</label>
@@ -70,7 +87,7 @@
         </section>
     </main>
 
-    <footer class="slide-up delay-3">
+    <footer class="slide-up delay-4">
         <p>&copy; 2025 Festejando Campo e Cidade</p>
     </footer>
 
