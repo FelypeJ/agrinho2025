@@ -1,115 +1,26 @@
-/* index.html */
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festejando Campo e Cidade</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(to bottom right, #fdf6e3, #e0f7fa);
-            font-family: 'Fredoka', sans-serif;
-            margin: 0;
-            padding: 0;
-            font-size: 18px;
-            color: #333;
-        }
+document.addEventListener("DOMContentLoaded", () => {
+    const eventos = [
+        "Apresentações de quadrilha",
+        "Shows de música ao vivo",
+        "Feira de artesanato",
+        "Comidas típicas do campo e da cidade",
+        "Desfile cultural"
+    ];
 
-        h1, h2 {
-            color: #2e7d32;
-        }
+    const listaEventos = document.getElementById("lista-eventos");
 
-        nav ul li a {
-            color: #1e88e5;
-            font-weight: bold;
-            font-size: 18px;
-        }
+    eventos.forEach(evento => {
+        const li = document.createElement("li");
+        li.textContent = evento;
+        listaEventos.appendChild(li);
+    });
 
-        /* Animações adicionais */
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
-
-        .slide-up {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 1s ease-out forwards;
-        }
-
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.6s; }
-        .delay-3 { animation-delay: 0.9s; }
-        .delay-4 { animation-delay: 1.2s; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</head>
-<body class="fade-in">
-    <header class="slide-up delay-1">
-        <h1>Festejando Campo e Cidade</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre" class="slide-up delay-2">Sobre</a></li>
-                <li><a href="#eventos" class="slide-up delay-3">Eventos</a></li>
-                <li><a href="#contato" class="slide-up delay-4">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <img src="https://images.pexels.com/photos/3408356/pexels-photo-3408356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Banner do Evento na Cidade" style="width:100%; max-height:400px; object-fit:cover;">
-
-    <main>
-        <section id="sobre" class="slide-up delay-2">
-            <h2>Sobre o Evento</h2>
-            <img src="https://images.pexels.com/photos/6933777/pexels-photo-6933777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Pessoas comemorando no campo" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-            <img src="https://images.pexels.com/photos/1879393/pexels-photo-1879393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Comemoração na cidade" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-            <p>O evento "Festejando Campo e Cidade" é uma grande celebração que une as tradições do meio rural com o estilo de vida urbano. Uma festa para todas as idades, com atrações culturais, culinária típica e muita diversão!</p>
-        </section>
-
-        <section id="eventos" class="slide-up delay-3">
-            <h2>Programação</h2>
-            <img src="https://images.pexels.com/photos/2088215/pexels-photo-2088215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Imagem de evento no campo" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
-            <p>Durante todo o dia, o evento contará com diversas atrações culturais e gastronômicas que representam o melhor do campo e da cidade. Com espaços temáticos, o público poderá vivenciar experiências únicas em cada ambiente.</p>
-            <p>As atividades incluem apresentações de grupos folclóricos, oficinas de artesanato, comidas típicas regionais e atrações musicais variadas para todas as idades.</p>
-            <ul id="lista-eventos">
-                <li>10:00 - Abertura com música ao vivo</li>
-                <li>11:30 - Feira de produtos locais</li>
-                <li>13:00 - Apresentação de danças típicas</li>
-                <li>15:00 - Gincanas e brincadeiras</li>
-                <li>17:00 - Encerramento com show especial</li>
-            </ul>
-        </section>
-
-        <section id="contato" class="slide-up delay-4">
-            <h2>Fale Conosco</h2>
-            <img src="https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Contato rural" style="width: 100%; max-width: 400px; margin: 0 auto 20px; display: block; border-radius: 10px;">
-            <form id="form-contato">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="slide-up delay-4">
-        <p>&copy; 2025 Festejando Campo e Cidade</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    const form = document.getElementById("form-contato");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nome = form.nome.value;
+        const mensagem = form.mensagem.value;
+        alert(`Obrigado pela sua mensagem, ${nome}!`);
+        form.reset();
+    });
+});
