@@ -21,6 +21,7 @@
 
         h1, h2 {
             color: #2e7d32;
+            font-size: 2em;
         }
 
         nav ul li a {
@@ -53,6 +54,47 @@
         @keyframes slideUp {
             to { opacity: 1; transform: translateY(0); }
         }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+            background: #ffffffcc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        #form-message {
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="fade-in">
@@ -67,19 +109,19 @@
         </nav>
     </header>
 
-    <img src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Banner com prédios da cidade" style="width:100%; max-height:300px; object-fit:cover;">
+    <img src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Prédio da cidade" style="width:100%; max-height:300px; object-fit:cover;">
 
     <main>
         <section id="sobre" class="slide-up delay-2">
             <h2>Sobre o Evento</h2>
-            <img src="https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250" alt="Paisagem do campo" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-            <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250" alt="Prédios da cidade ao entardecer" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <img src="https://images.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem do campo vertical" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem urbana vertical" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
             <p>O evento "Festejando Campo e Cidade" é uma grande celebração que une as tradições do meio rural com o estilo de vida urbano. Uma festa para todas as idades, com atrações culturais, culinária típica e muita diversão!</p>
         </section>
 
         <section id="eventos" class="slide-up delay-3">
             <h2>Programação</h2>
-            <img src="https://images.pexels.com/photos/356004/pexels-photo-356004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250" alt="Paisagem rural" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
+            <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem rural vertical" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
             <p>Durante todo o dia, o evento contará com diversas atrações culturais e gastronômicas que representam o melhor do campo e da cidade. Com espaços temáticos, o público poderá vivenciar experiências únicas em cada ambiente.</p>
             <p>As atividades incluem apresentações de grupos folclóricos, oficinas de artesanato, comidas típicas regionais e atrações musicais variadas para todas as idades.</p>
             <ul id="lista-eventos">
@@ -98,9 +140,10 @@
                 <input type="text" id="nome" name="nome" required>
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
                 <button type="submit">Enviar</button>
+                <div id="form-message"></div>
             </form>
         </section>
     </main>
@@ -109,6 +152,16 @@
         <p>&copy; 2025 Festejando Campo e Cidade</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('form-contato');
+        const message = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            message.textContent = 'Mensagem enviada com sucesso!';
+            message.style.color = 'green';
+            form.reset();
+        });
+    </script>
 </body>
 </html>
