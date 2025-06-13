@@ -47,20 +47,29 @@
         </nav>
     </header>
 
+    <img src="img/banner.jpg" alt="Banner do Evento" style="width:100%; max-height:400px; object-fit:cover;">
+
     <main>
-        <section id="sobre">
+        <section id="sobre" class="slide-up delay-2">
             <h2>Sobre o Evento</h2>
             <img src="img/festa.jpg" alt="Festa rural e urbana" style="max-width:100%; border-radius: 10px;" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/1646316/pexels-photo-1646316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500';">
+            <p>O evento "Festejando Campo e Cidade" celebra as tradições rurais e urbanas com muita música, comida típica e alegria!</p>
+        </section>
 
-        <section id="eventos">
+        <section id="eventos" class="slide-up delay-3">
             <h2>Programação</h2>
             <ul id="lista-eventos">
-                <!-- Eventos serão inseridos por JavaScript -->
+                <li>10:00 - Abertura com música ao vivo</li>
+                <li>11:30 - Feira de produtos locais</li>
+                <li>13:00 - Apresentação de danças típicas</li>
+                <li>15:00 - Gincanas e brincadeiras</li>
+                <li>17:00 - Encerramento com show especial</li>
             </ul>
         </section>
 
-        <section id="contato">
+        <section id="contato" class="slide-up delay-4">
             <h2>Fale Conosco</h2>
+            <img src="img/contato.jpg" alt="Contato" style="width: 100%; max-width: 400px; margin: 0 auto 20px; display: block;">
             <form id="form-contato">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
