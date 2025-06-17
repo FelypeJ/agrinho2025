@@ -116,29 +116,28 @@
             text-align: center;
         }
 
+        .img-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
         .responsive-img {
             width: 100%;
             max-width: 250px;
             height: auto;
-            display: block;
-            margin: 10px auto;
             border-radius: 10px;
         }
 
         .img-card {
+            width: 100%;
             max-width: 250px;
-            margin: 10px;
             background: #ffffffcc;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             text-align: center;
-        }
-
-        .img-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         ul li {
@@ -203,12 +202,13 @@
     <main>
         <section id="sobre" class="slide-up delay-2">
             <h2>Sobre o Evento</h2>
-            <p>O evento <strong>"Festejando Campo e Cidade"</strong> é uma experiência única que reúne <em>cultura, tradição, inovação e sustentabilidade</em> em um só lugar...</p>
+            <p>O evento <strong>"Festejando Campo e Cidade"</strong> é uma celebração da cultura, tradição e inovação. Este encontro busca aproximar o ambiente urbano da vida no campo, promovendo sustentabilidade, arte, gastronomia e educação ambiental. É um espaço para troca de saberes, experiências e valorização da diversidade brasileira.</p>
         </section>
 
         <section id="curiosidades" class="curiosidades slide-up delay-3">
             <h3>Você Sabia?</h3>
             <p>🌾 Mais de 70% dos alimentos que chegam à sua mesa vêm da agricultura familiar no Brasil.</p>
+            <p>🏙️ Cidades sustentáveis investem em hortas urbanas, transporte verde e reutilização de recursos.</p>
         </section>
 
         <section id="eventos" class="slide-up delay-3">
@@ -223,13 +223,16 @@
                     <p>🌾 Agricultura em destaque: valorizando o produtor local.</p>
                 </div>
             </div>
-            <p>Explore atividades planejadas para toda a família...</p>
+            <p>Explore atividades planejadas para toda a família, como feiras de produtos orgânicos, apresentações culturais, oficinas de reciclagem, atrações musicais ao vivo, culinária típica do campo e da cidade, e muito mais.</p>
         </section>
 
         <section id="contato" class="slide-up delay-4">
             <h2>Fale Conosco</h2>
-            <p>Quer participar, sugerir algo ou tirar dúvidas? Use o formulário abaixo...</p>
+            <p>Quer participar, sugerir algo ou tirar dúvidas? Use o formulário abaixo para nos enviar sua mensagem. Estamos ansiosos para ouvir você!</p>
             <form id="form-contato">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" rows="4" required></textarea>
                 <button type="submit">Enviar</button>
                 <div id="form-message"></div>
             </form>
