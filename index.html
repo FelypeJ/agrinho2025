@@ -21,7 +21,6 @@
 
         h1, h2 {
             color: #2e7d32;
-            font-size: 2em;
         }
 
         nav ul li a {
@@ -30,7 +29,6 @@
             font-size: 18px;
         }
 
-        /* Animações adicionais */
         .fade-in {
             animation: fadeIn 2s ease-in;
         }
@@ -95,6 +93,15 @@
             color: green;
             text-align: center;
         }
+
+        .responsive-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body class="fade-in">
@@ -109,19 +116,19 @@
         </nav>
     </header>
 
-    <img src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Prédio da cidade" style="width:100%; max-height:300px; object-fit:cover;">
+    <img src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Banner com prédios da cidade" class="responsive-img">
 
     <main>
         <section id="sobre" class="slide-up delay-2">
             <h2>Sobre o Evento</h2>
-            <img src="https://images.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem do campo vertical" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-            <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem urbana vertical" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <img src="https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Paisagem do campo" class="responsive-img">
+            <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Prédios da cidade ao entardecer" class="responsive-img">
             <p>O evento "Festejando Campo e Cidade" é uma grande celebração que une as tradições do meio rural com o estilo de vida urbano. Uma festa para todas as idades, com atrações culturais, culinária típica e muita diversão!</p>
         </section>
 
         <section id="eventos" class="slide-up delay-3">
             <h2>Programação</h2>
-            <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem rural vertical" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
+            <img src="https://images.pexels.com/photos/356004/pexels-photo-356004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="Paisagem rural" class="responsive-img">
             <p>Durante todo o dia, o evento contará com diversas atrações culturais e gastronômicas que representam o melhor do campo e da cidade. Com espaços temáticos, o público poderá vivenciar experiências únicas em cada ambiente.</p>
             <p>As atividades incluem apresentações de grupos folclóricos, oficinas de artesanato, comidas típicas regionais e atrações musicais variadas para todas as idades.</p>
             <ul id="lista-eventos">
