@@ -15,22 +15,40 @@
             font-family: 'Fredoka', sans-serif;
             margin: 0;
             padding: 0;
-            font-size: 20px;
+            font-size: 22px;
             color: #333;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 42px;
+            color: #2e7d32;
         }
 
         h2 {
-            font-size: 28px;
+            font-size: 34px;
+            color: #388e3c;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
         }
 
         nav ul li a {
             color: #1e88e5;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
         }
 
         .fade-in {
@@ -73,7 +91,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         button {
@@ -82,7 +100,7 @@
             border: none;
             padding: 10px 15px;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -125,13 +143,19 @@
         }
 
         .curiosidades h3 {
-            font-size: 24px;
+            font-size: 26px;
             color: #2e7d32;
         }
 
         .curiosidades p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #c8e6c9;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
@@ -142,6 +166,7 @@
             <ul>
                 <li><a href="#sobre" class="slide-up delay-2">Sobre</a></li>
                 <li><a href="#eventos" class="slide-up delay-3">Eventos</a></li>
+                <li><a href="#curiosidades" class="slide-up delay-3">Curiosidades</a></li>
                 <li><a href="#contato" class="slide-up delay-4">Contato</a></li>
             </ul>
         </nav>
@@ -152,29 +177,31 @@
     <main>
         <section id="sobre" class="slide-up delay-2">
             <h2>Sobre o Evento</h2>
-            <p>O evento <strong>"Festejando Campo e Cidade"</strong> é uma celebração que busca promover o encontro entre dois estilos de vida distintos, porém complementares. Em um ambiente inclusivo, divertido e educativo, mostramos o quanto a <strong>tradição do campo</strong> e a <strong>inovação urbana</strong> podem coexistir e enriquecer nossa sociedade.</p>
-            <p>Você encontrará desde <strong>feiras de produtos orgânicos</strong> até <strong>exibições tecnológicas</strong> de startups urbanas. Nosso objetivo é criar <em>pontes entre gerações e territórios</em>, promovendo o respeito à cultura local, à sustentabilidade e ao desenvolvimento.</p>
-            <p>Venha descobrir a diversidade do nosso país, experimentar novos sabores, aprender com as raízes e inspirar-se com a cidade que nunca dorme!</p>
+            <p>O evento <strong>"Festejando Campo e Cidade"</strong> é uma experiência única que reúne <em>cultura, tradição, inovação e sustentabilidade</em> em um só lugar. Ele celebra a diversidade brasileira ao unir elementos da vida rural e urbana em harmonia.</p>
+            <p>Você encontrará <strong>exposições temáticas</strong>, <strong>palestras educativas</strong>, <strong>gastronomia regional</strong>, além de <strong>apresentações artísticas</strong> que contam a história do nosso povo. Um verdadeiro encontro de gerações e estilos de vida.</p>
+            <p>✨ Uma jornada emocionante através do tempo e das paisagens brasileiras. Venha se conectar!</p>
         </section>
 
-        <section class="curiosidades slide-up delay-3">
+        <section id="curiosidades" class="curiosidades slide-up delay-3">
             <h3>Você Sabia?</h3>
             <p>🌾 Mais de 70% dos alimentos que chegam à sua mesa vêm da agricultura familiar no Brasil.</p>
             <p>🏙️ Cidades inteligentes estão cada vez mais integrando soluções sustentáveis, como hortas urbanas e energia solar, inspiradas no estilo de vida rural.</p>
+            <p>🚜 O Brasil é o terceiro maior exportador mundial de produtos agrícolas, com destaque para a soja e o milho.</p>
             <p>🎉 Misturar campo e cidade em eventos promove não só o turismo cultural, mas também fortalece a economia local.</p>
+            <p>🍃 Muitas tecnologias urbanas foram inspiradas em práticas do campo, como compostagem e captação de água da chuva.</p>
         </section>
 
         <section id="eventos" class="slide-up delay-3">
             <h2>Programação</h2>
             <img src="https://images.pexels.com/photos/1581793/pexels-photo-1581793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Paisagem rural" class="responsive-img">
             <img src="https://images.pexels.com/photos/207247/pexels-photo-207247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400" alt="Plantação de trigo" class="responsive-img">
-            <p>Durante o evento, você poderá explorar atrações que refletem as riquezas do <strong>campo</strong> e da <strong>cidade</strong>. Prepare-se para um dia de descobertas, diversão e muita cultura!</p>
-            <p>Entre as principais atividades estão:</p>
+            <p>Explore atividades planejadas para toda a família, com foco em <strong>educação ambiental</strong>, <strong>gastronomia típica</strong>, <strong>oficinas criativas</strong> e <strong>inovação</strong>.</p>
             <ul id="lista-eventos">
                 <li><strong>10:00</strong> - Abertura com música ao vivo no palco principal</li>
                 <li><strong>11:30</strong> - Feira de produtos locais e artesanato sustentável</li>
                 <li><strong>13:00</strong> - Apresentações culturais: danças, folclore e teatro de rua</li>
                 <li><strong>15:00</strong> - Atividades infantis: contação de histórias e gincanas</li>
+                <li><strong>16:00</strong> - Painel sobre sustentabilidade e inovação no campo e cidade</li>
                 <li><strong>17:00</strong> - Encerramento com show especial e luzes da cidade</li>
             </ul>
             <p><strong>Local:</strong> Parque das Culturas - Av. Paulista, São Paulo - SP<br>
@@ -186,6 +213,7 @@
                 <li>É proibido portar bebidas alcoólicas de fora.</li>
                 <li>Animais de estimação são bem-vindos, mas devem estar com guia.</li>
                 <li>Respeite os espaços temáticos e evite o descarte irregular de lixo.</li>
+                <li>É recomendável o uso de protetor solar e roupas leves.</li>
             </ul>
         </section>
 
